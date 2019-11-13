@@ -7,12 +7,17 @@
 二、分步分析：  
 1.格式改变：  
 （1）获取用户输入：  
-System.out.println("请输入古诗");  
-String line = sc.nextLine();  
+    
+    System.out.println("请输入古诗");  
+    String line = sc.nextLine();  
+    
 （2）定义：  
-String result = "";  
-char[] chs = line.toCharArray();  
+    
+    String result = "";  
+    char[] chs = line.toCharArray();  
+    
 （3)判断用户的输入是否符合格式如不符合则提示用户重新输入：  
+    
 		int o=0;  
 		while(o<1) {  
 			if(chs.length%7==0) {  
@@ -32,7 +37,8 @@ char[] chs = line.toCharArray();
 			}  
 		}  
 （4）改变格式，插入，和。：  
-for (int i = 0; i<= chs.length - 1; i++) {  
+    
+    for (int i = 0; i<= chs.length - 1; i++) {  
 			int j=(i+1)/7;  
 			System.out.print(chs[i]);  
 			if((i+1)%7==0) {  
@@ -42,15 +48,21 @@ for (int i = 0; i<= chs.length - 1; i++) {
 					System.out.println("。");  
 			}  
 		}  
+    
 2.查找字词：  
 （1）获取用户输入：  
-System.out.println("请输入要查找的字或词");  
-line = sc.nextLine();    
+    
+    System.out.println("请输入要查找的字或词");  
+    line = sc.nextLine();  
+    
 （2）定义：  
-String Result = "";  
-char[] cha = line.toCharArray();  
-（3）遍历全文，寻找与用户的输入一样的信息：  
-for (int x = 0; x<= cha.length - 1; x++) {  
+    
+    String Result = "";  
+    char[] cha = line.toCharArray();  
+    
+（3）遍历全文，寻找与用户的输入一样的信息：
+    
+    for (int x = 0; x<= cha.length - 1; x++) {  
 			Result += cha[x];  
 		}  
 		int sum=0;  
@@ -66,7 +78,9 @@ for (int x = 0; x<= cha.length - 1; x++) {
 				sum=sum;  
 		}  
 		sum=sum/cha.length;  
-（4）输出结果：  
+    
+（4）输出结果： 
+    
 		System.out.println("所查找的字或词在诗中的数目是："+sum);  
 		System.out.println("再见！");  
 
@@ -74,9 +88,8 @@ for (int x = 0; x<= cha.length - 1; x++) {
 ![截图](https://github.com/hbtqllmc/lmcsy4/blob/master/690052555994b1955bcc8ac036523e6.png)
 
 
-
-
-
+四、总结：  
+本次的java实验整体上还是比较简单地，整节实验课让我了解到字符串的相关知识，让我获益匪浅，在程序中，我学习到了很多新的内容，同时也复习到了之前学习的很多内容，在对字符串中的字符进行查找时，先输入查找内容，再进行遍历，并输出遍历结果，这个内容让我复习到了之前学习的其他相关知识，在对整首古诗的进行分隔的操作，我利用循环进行判断，看他是否满足7个字符和2个字符分别进行判断来达到进行分隔的效果，总之，整个实验还是让我收获了许多内容。
 
 
 
